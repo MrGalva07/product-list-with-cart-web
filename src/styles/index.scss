@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     font-family:Helvetica;
@@ -44,4 +45,21 @@
     height: 35px;
     width: 130px;
    
+}
+
+
+.container{
+    width: 200px;
+    height: 500px;
+    position: relative;
+   
+    background-color: grey;
+    .button{
+        padding: 15px 30px;
+        position: absolute;
+        background-color: red;
+        bottom: -20px;
+        left: 50%;
+        transform: translate(-50%,50%);
+    }
 }

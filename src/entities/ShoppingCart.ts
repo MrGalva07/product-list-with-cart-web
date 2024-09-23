@@ -1,8 +1,8 @@
 import { Product } from "./Product";
 
-class ShoppingCart{
-    totalValue:number = 0;
-    items:Product[]=[]
+export class ShoppingCart{
+   private _totalValue:number = 0;
+   private _products:Product[]=[]
 
     constructor(){
 
@@ -10,11 +10,24 @@ class ShoppingCart{
 
 
     addToCart(product:Product){
-        this.items.push(product)
-        this.totalValue+=product.price
+        const productInCart = this._products.includes(product);
+
+        if(!productInCart){
+            this._products.push(product)
+        }
+       
+        this._totalValue+=product.price
     }
 
 
+
+    get products(){
+        return this._products;
+    }
+
+    get totalValue(){
+        return this._totalValue;
+    }
 
 
 }
