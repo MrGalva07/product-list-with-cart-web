@@ -6,13 +6,10 @@ import { Product } from "./entities/Product";
 import data from"../data.json";
 import { ShoppingCart } from "./entities/ShoppingCart"
 
-const product1 = new Product('Banana', "Fruta",10,"http://example.com")
-const product2 = new Product('Pera', "Fruta",5,"http://example.com")
+const product1 = new Product("Banana", "Fruta",10,"http://example.com")
+const  product2 = new Product("Maçã", "Fruta", 15, "http://example.com")
+product1.incrementQuantity()
+product2.incrementQuantity();
 
-const cart = new ShoppingCart()
 
-cart.addToCart(product1)
-cart.addToCart(product2)
-console.log(cart)
-console.log(cart.products.length)
-console.log(cart.totalValue)
+console.log(ShoppingCart.products)
