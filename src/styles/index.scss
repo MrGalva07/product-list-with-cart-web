@@ -2,69 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family:Helvetica;
+// @use "_components";
+
+@font-face {
+  font-family: "Red Hat Text";
+  src: url("../../assets/fonts/RedHatText-VariableFont_wght.ttf")
+    format("truetype");
 }
 
-
-
-
-.product-container{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid;
-    border-radius: 5px;
-    margin: 20px auto;
-    margin: 100px;
-    height: 300px;
-    width: 250px;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-.image-div{
-    border: 1px solid;
-    height: 200px;
-    border-radius: 5px;
-
-    
-
+.container {
+  width: 200px;
+  height: 250px;
+  background-color: grey;
+  position: relative;
 }
 
-.add-to-cart-div{
-  
-    display: flex;
-    justify-content: center;
-
+.button {
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
-.buttonAddToCart{
-    cursor: pointer;
-    display: flex;
-    border: 1px solid;
-    border-radius: 30px;
-    justify-content: center;
-    align-items: center;
-    height: 35px;
-    width: 130px;
-   
-}
-
-
-.container{
-    width: 200px;
-    height: 500px;
-    position: relative;
-   
-    background-color: grey;
-    .button{
-        padding: 15px 30px;
-        position: absolute;
-        background-color: red;
-        bottom: -20px;
-        left: 50%;
-        transform: translate(-50%,50%);
-    }
+body {
+  font-family: "Red Hat Text", sans-serif;
 }

@@ -46,6 +46,10 @@ export class Product {
         this.calculateTotal();
     }
 
+
+        get quantity(){
+            return this._quantity
+        }
     get total(){
         return this._total;
     }
@@ -54,6 +58,30 @@ export class Product {
 
 
      return this._price
+    }
+
+    get id(){
+        return  this._idProduct
+
+    }
+
+    toHTML(){
+        const productListHTML = document.getElementById('productList')
+        const image = this._imageUrl
+        const category = this._category
+        const  name = this._name
+        const price = this._price
+        
+    
+
+        
+
+
+
+
+
+
+
     }
 
     
